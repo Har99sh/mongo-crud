@@ -11,7 +11,7 @@
     <% creates.forEach(create => { %>
 
   <div class="form-data-container" id="form_data_container">
-    <div class="image-container" id="displayed_image"><%= create.image %> </div>
+    <a href="/dashboard/read/<%= create._id %> "><div class="image-container" id="displayed_image"><%= create.image %> </div></a>
     <div class="displayed-description" id="displayed_description"><%= create.description %></div>
     <div class="displayed-likes" id="displayed_likes"><%= create.likes %></div>
     <div class="displayed-tags" id="displayed_tags"><%= create.tags %></div>

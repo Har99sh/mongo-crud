@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('partials/head'); %>
+    <title>Create</title>
+</head>
+
+<body >
+  <%- include('partials/header'); %>
+    <div class="form-data-container" id="form_data_container">
+      <div class="image-container" id="displayed_image"><%= creates.image %> </div>
+      <div class="displayed-description" id="displayed_description"><%= creates.description %></div>
+      <div class="displayed-likes" id="displayed_likes"><%= creates.likes %></div>
+      <div class="displayed-tags" id="displayed_tags"><%= creates.tags %></div>
+      <div class="displayed-id" id="displayed_id"><%= creates.username %></div>
+    </div>
+
+    <%- include('partials/footer'); %>
+
+</body>
+
+</html>

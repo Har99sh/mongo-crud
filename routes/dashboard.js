@@ -52,6 +52,13 @@ router.post('/read', function (req, res, next) {
     })
 });
 
+router.get('/read/:id', function (req, res ,next){
+  console.log(req.params.id);
+  const id = req.params.id;
+  Create.findById(id)
+    .then((result) => res.render('singleCreate', {creates: result}))
+    .catch((error) => console.error('not create find'))
+})
 /* Update users listing. */
 
 router.get('/update', function (req, res, next) {
