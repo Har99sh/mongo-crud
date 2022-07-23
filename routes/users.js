@@ -13,17 +13,17 @@ router.get('/login', function(req, res, next) {
 
 });
 
-router.get('/signup', function(req, res, next) {
-  const user = new User({
-    username: "har99sh",
-    email: "deep99harsh@gmail.com",
-    name: "Harsh 2",
-    password: "potato"    
-  })
-  user.save()
-  .then((result) => res.send(result))
-  .catch ((error) => res.send(error))
-});
+// router.get('/signup', function(req, res, next) {
+//   const user = new User({
+//     username: "har99sh",
+//     email: "deep99harsh@gmail.com",
+//     name: "Harsh 2",
+//     password: "potato"    
+//   })
+//   user.save()
+//   .then((result) => res.send(result))
+//   .catch ((error) => res.send(error))
+// });
 
 // router.get('/users-db', function (req, res, next){
 //   User.find()

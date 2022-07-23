@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <%- include('partials/head'); %>
- <title>create</title>
+  <%- include('partials/head'); %>
+    <title>Create</title>
 </head>
+
 <body class="create">
   <%- include('partials/header'); %>
 
-       <!--Form-->
-       <form method="post" id="post_form">
-        <input id="text" placeholder="Description" type="text" maxlength="50" />
-        <input id="image" placeholder="Image url" type="url" />
-        <input id="likes" placeholder="Number of likes" type="number" />
-        <input id="tags" placeholder="Tags" type="text" />
-        <input id="owner" placeholder="Owner id" type="" />
-        <input id="submit" type="submit" />
+    <!--Form-->
+    <form action="/dashboard/read" method="post" id="post_form">
+      <input id="description" name="description" placeholder="Description" type="text" maxlength="50"/>
+      <input id="image" name="image" placeholder="Image url" type="string"/>
+      <input id="likes" name="likes" placeholder="Number of likes" type="number"/>
+      <input id="tags" name="tags" placeholder="Tags" type="text"/>
+      <input id="username" name="username" placeholder="Username" type="text"/>
+      <input id="submit" type="submit"/>
     </form>
     <%- include('partials/footer'); %>
-    
+
 </body>
+
 </html>

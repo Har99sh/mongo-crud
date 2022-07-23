@@ -14,7 +14,7 @@ const createSchema = new Schema ({
     },
     likes: {
         type: Number,
-        required: false
+        required: true
     },
     tags: {
        type: [String],
@@ -22,8 +22,7 @@ const createSchema = new Schema ({
     },
     username: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     }
 }, {timestamps: true});
 
