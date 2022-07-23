@@ -31,7 +31,13 @@ router.get('/create', function (req, res, next) {
 /* Read users listing. */
 
 router.get('/read', function (req, res, next) {
-  res.render('read');
+  Create.find()
+    .then((result) => {
+      res.render('read', {creates: result})
+    })
+    .catch((error) => {
+      console.error("couldnt get created posts")
+    })
 });
 
 router.post('/read', function (req, res, next) {
