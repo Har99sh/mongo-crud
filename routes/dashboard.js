@@ -71,4 +71,10 @@ router.get('/delete', function (req, res, next) {
   res.render('delete');
 });
 
+router.delete('/delete/:id', function(res, req, next){
+  const id = req.params.id;
+  Create.findByIdAndDelete(id)
+    .then((result) => res.send('Create deleted'))
+    .catch((error) => console.log("not deleted error"))
+});
 module.exports = router;

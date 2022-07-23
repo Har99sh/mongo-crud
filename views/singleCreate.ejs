@@ -14,6 +14,7 @@
       <div class="displayed-likes" id="displayed_likes"><%= creates.likes %></div>
       <div class="displayed-tags" id="displayed_tags"><%= creates.tags %></div>
       <div class="displayed-id" id="displayed_id"><%= creates.username %></div>
+      <a href="/dashboard/delete/<%= creates._id %> "><button>Delete</button></a>
     </div>
 
     <%- include('partials/footer'); %>
