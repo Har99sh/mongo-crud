@@ -20,12 +20,16 @@ const createSchema = new Schema ({
        type: [String],
        required: true 
     },
-    ownerId: {
+    username: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     }
 }, {timestamps: true});
 
-const Create = mongoose.model('Create', createSchema)
+const Create = mongoose.model('Create', createSchema);
+
+module.exports = Create;
+
 
 
